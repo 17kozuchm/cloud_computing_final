@@ -2,6 +2,9 @@
 CS1660 Final Project
 Docker Hub: https://hub.docker.com/u/mak402
 
+* APPLICATION DEMO VIDEO ABOVE: 
+* CODE WALKTHROUGH VIDEO ON ONEDRIVE: https://pitt-my.sharepoint.com/:v:/g/personal/mak402_pitt_edu/EatFNxHDfOtCtWRLS5_Fsw8B4SnQdQrySupsURYmaoTGnQ?e=u9ckhs
+
 Necessary Host Machine Configuration: 
 - the host computer must have docker capabilities such as docker desktop installed
 - xlaunch must also be configured on the host machine to launch visual applications
