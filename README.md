@@ -4,6 +4,7 @@ Docker Hub: https://hub.docker.com/u/mak402
 
 Necessary Display Update: 
 - docker-compose.yml line 167: DISPLAY variable must be replaced with host IP address
+- xlaunch must also be configured on the host machine to launch visual applications
 
 Steps to Setup Data Science Toolbox:
 
