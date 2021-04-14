@@ -1,4 +1,4 @@
-# cloud_computing_final
+# CS1660: Project 1 - Data Science Toolbox
 CS1660 Final Project
 Docker Hub: https://hub.docker.com/u/mak402
 
