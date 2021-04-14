@@ -8,7 +8,7 @@ Necessary Host Machine Configuration:
 
 Steps to Setup Data Science Toolbox:
 1. Download docker-compose.yml 
-2. In line 128 of docker-compose.yml: replace <HOST IP ADDRESS> with the current host IP address
+2. In line 128 of docker-compose.yml: replace \<HOST IP ADDRESS\> with the current host IP address
 3. Open terminal and navigate to the folder holding the docker-compose.yml file
 4. Run the command "docker-compose up" in the terminal
 6. 
