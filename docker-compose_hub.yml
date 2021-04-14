@@ -1,0 +1,144 @@
+#Created By: Mary Kozuch
+#Last Edited: 4/13/2021
+version: "3.9"
+services:
+  Jupyter:
+    image: mak402/jupyter
+    environment:
+      - DISABLE_AUTH=true
+    ports:
+      - "8887:8887"
+    logging:
+      driver: none
+      
+  Rstudio:
+    image: rocker/rstudio
+    environment:
+      - PASSWORD=pass
+    ports:
+      - "8787:8787"
+    logging:
+      driver: none
+      
+  #PASSWORD=root
+  Git: 
+   image: mak402/git
+   ports:
+     - "2201:22"
+   stdin_open: true
+   tty: true
+   privileged: true
+   command: "/usr/sbin/sshd -D"
+   logging:
+      driver: none
+      
+  #PASSWORD=orange
+  Orange:
+    image: acopar/orange-docker
+    ports:
+      - "5901:5901"
+      - "6901:6901"
+    logging:
+      driver: none
+      
+  Visual_studio:
+    image: codercom/code-server:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - PASSWORD=password
+    logging:
+      driver: none
+      
+  #PASSWORD=hduser
+  Apache_Hadoop:
+    image: mak402/hadoop
+    volumes:
+      - ./docker-hadoop-data/:/home/hduser/hdfs-data/
+      - ./docker-hadoop-logs/:/opt/hadoop/logs/
+    stdin_open: true
+    tty: true
+    ports:
+      - "2202:22"
+      - 2181:2181
+      - 39534:39534
+      - 9001:9000
+      - 50070:50070
+      - 50010:50010
+      - 50020:50020
+      - 50075:50075
+      - 50090:50090
+      - 8030:8030
+      - 8031:8031
+      - 8032:8032
+      - 8033:8033
+      - 8088:8088
+      - 8040:8040
+      - 8042:8042
+      - 13562:13562
+      - 47784:47784
+      - 10020:10020
+      - 19888:19888
+    logging:
+      driver: none
+      
+  #test connection to 7077
+  spark-master: 
+    image: sdesilva26/spark_master:0.0.2
+    hostname: spark
+    container_name: spark
+    ports:
+      - "7077:7077"
+      - "8082:8082"
+    logging:
+      driver: none
+    environment: 
+      - SPARK_MASTER_WEBUI_PORT=8082
+      
+  spark-worker:
+    image: sdesilva26/spark_worker:0.0.2
+    ports:
+      - "8081:8081"
+    links:
+      - spark-master
+    environment:
+      - CORES=3
+      - MEMORY=15G
+    logging:
+      driver: none
+      
+  TensorFlow:
+    image: mak402/tensorflow
+    ports:
+      - "8888:8888"
+    stdin_open: true
+    tty: true
+    privileged: true
+    
+  Markdown:
+    image: v4tech/markdown-editor
+    ports:
+      - "12345:80"
+    logging:
+      driver: none
+      
+  app:
+    image: mak402/app
+    environment:
+      - DISPLAY=192.168.1.34:0.0
+    volumes: 
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+      - .:/root/working
+    ports:
+      - "2200:22"
+    links:
+      - "Jupyter"
+      - "Rstudio"
+      - "Git"
+      - "Orange"
+      - "Visual_studio"
+      - "Apache_Hadoop"
+      - "spark-master:Apache_Spark"
+      - "TensorFlow"
+      - "Markdown"
