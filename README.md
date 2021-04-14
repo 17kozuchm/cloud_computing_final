@@ -1,4 +1,5 @@
 # CS1660: Project 1 - Data Science Toolbox
+Mary Kozuch
 CS1660 Final Project
 Docker Hub: https://hub.docker.com/u/mak402
 
