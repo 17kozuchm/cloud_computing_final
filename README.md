@@ -2,8 +2,8 @@
 CS1660 Final Project
 Docker Hub: https://hub.docker.com/u/mak402
 
-* APPLICATION DEMO VIDEO ABOVE: 
-* CODE WALKTHROUGH VIDEO ON ONEDRIVE: https://pitt-my.sharepoint.com/:v:/g/personal/mak402_pitt_edu/EatFNxHDfOtCtWRLS5_Fsw8B4SnQdQrySupsURYmaoTGnQ?e=u9ckhs
+* APPLICATION DEMO VIDEO ABOVE: Mary_Kozuch_Data_Science_Demo.mp4
+* CODE WALKTHROUGH VIDEO ON ONEDRIVE: [Mary_Kozuch_Data_Science_Code.mp4](https://pitt-my.sharepoint.com/:v:/g/personal/mak402_pitt_edu/EatFNxHDfOtCtWRLS5_Fsw8B4SnQdQrySupsURYmaoTGnQ?e=u9ckhs)
 
 Necessary Host Machine Configuration: 
 - the host computer must have docker capabilities such as docker desktop installed
