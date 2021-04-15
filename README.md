@@ -17,6 +17,7 @@ Setting Up the Data Science Toolbox:
 2. In line 128 of docker-compose.yml: replace \<HOST IP ADDRESS\> with the current host IP address
 3. Open terminal and navigate to the folder holding the docker-compose.yml file
 4. Run the command "docker-compose up" in the terminal
+* NOTE: The gui sometimes launches in an in-ideal place on the user's screen. If the gui is not visible but the xlaunch instance has begun, the container system is running and the user may need to find the gui on their desktop screen. On windows 10 this can be done by selecting the "Task View" button at the bottom of the screen next to the search bar then right clicking on the xlaunch instance and selecting "snap left" or "snap right".
 
 Using the Data Science Toolbox:
 Please ensure that you have successfully built the toolbox following the above steps before proceeding.
